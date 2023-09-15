@@ -1,15 +1,19 @@
-<template>
-  <div>
-    <header class="bg-primary text-white p-4 text-center">
-      <h1 class="text-3xl">ร้านกาแฟ</h1>
+<template class="hello">
+  <div class="hello">
+    <header class="bg-success text-white p-3 text-center">
+      <h1 class="text-3xl">Hello Coffee</h1>
     </header>
 
     <main class="container mx-auto p-4">
       <div class="grid grid-cols-2 gap-4">
         <div v-for="(cafe, index) in cafes" :key="index" class="bg-white p-4 border rounded-lg">
+          <!-- เพิ่มคลาส text-center เพื่อจัดให้รูปภาพและข้อความอยู่กึ่งกลาง -->
+          <div class="text-center">
+            <img src="D:\Lab6_webtec\coffe-shop\src\assets\playerRight.png" alt="" class="mx-auto mb-2" style="width: 150px; height: 150px;">
+          </div>
           <h2 class="text-xl">{{ cafe.name }}</h2>
           <p>{{ cafe.description }}</p>
-          <button @click="reserveTable(index)" class="bg-primary text-white px-2 py-1 mt-2">จองโต๊ะ</button>
+          <button @click="reserveTable(index)" class="bg-info text-white px-2 py-1 mt-2">จองโต๊ะ</button>
         </div>
       </div>
     </main>
@@ -46,11 +50,11 @@ export default {
     const cafes = ref([
       {
         name: 'ร้านกาแฟ A',
-        description: 'ร้านกาแฟที่มีเมนูคาเฟ่สุดคลาสสิค',
+        description: 'ร้านกาแฟที่มีประวัติมานานกว่า200ปี',
       },
       {
         name: 'ร้านกาแฟ B',
-        description: 'ร้านกาแฟใหม่ล่าสุดที่มีบรรยากาศดี',
+        description: 'ร้านกาแฟเปิดใหม่ โปรโมชั่นลดราคาทุกแก้ว95%',
       },
     ]);
 
@@ -78,3 +82,22 @@ export default {
   },
 };
 </script>
+
+<style>
+* {
+  font-family: itim;
+  margin: 0;
+  padding: 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.hello h1{
+  font-size: 60px;
+}
+button{
+  width: 180px;
+}
+</style>
