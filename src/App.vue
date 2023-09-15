@@ -1,7 +1,7 @@
 <template class="hello">
   <div class="hello">
     <header class="bg-success text-white p-3 text-center">
-      <h1 class="text-3xl">Hello Coffee</h1>
+      <h1 class="text-3xl">ร้าน Coffee</h1>
     </header>
 
     <main class="container mx-auto p-4">
