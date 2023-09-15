@@ -9,11 +9,11 @@
         <div v-for="(cafe, index) in cafes" :key="index" class="bg-white p-4 border rounded-lg">
           <!-- เพิ่มคลาส text-center เพื่อจัดให้รูปภาพและข้อความอยู่กึ่งกลาง -->
           <div class="text-center">
-            <img src="D:\Lab6_webtec\coffe-shop\src\assets\playerRight.png" alt="" class="mx-auto mb-2" style="width: 150px; height: 150px;">
-          </div>
-          <h2 class="text-xl">{{ cafe.name }}</h2>
+            <img src="src\playerRight.png" alt="" class="mx-auto mb-2" style="width: 150px; height: 150px;">
+            <h2 class="text-xl">{{ cafe.name }}</h2>
           <p>{{ cafe.description }}</p>
           <button @click="reserveTable(index)" class="bg-info text-white px-2 py-1 mt-2">จองโต๊ะ</button>
+        </div>
         </div>
       </div>
     </main>
