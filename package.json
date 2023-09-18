@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "bootstrap": "^4.6.2",
+    "dir": "^0.1.2",
+    "push": "^0.1.1",
     "vue": "^3.3.4"
   },
   "devDependencies": {
